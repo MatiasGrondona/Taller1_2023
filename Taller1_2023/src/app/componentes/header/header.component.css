@@ -1,0 +1,29 @@
+/* Estilos para el header */
+header {
+    background-color: #FFE4B5; /* Color naranja pastel */
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    background-color: white;
+    color: #FFA07A; /* Color naranja pastel más oscuro */
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #FFA07A; /* Color naranja pastel más oscuro */
+    color: white;
+}
