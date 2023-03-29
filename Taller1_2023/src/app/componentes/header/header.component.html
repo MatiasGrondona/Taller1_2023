@@ -1,15 +1,113 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-	<header class="shadow-sm p-3 mb-5 bg-body-tertiary">
-		<h1>Pet FUN</h1>
-		<nav>
-			<button>FAQ</button>
-			<button>Quiénes somos</button>
-			<button>Productos</button>
-			<button>Perfil de usuario</button>
-			<button>Términos y condiciones</button>
-		</nav>
-	</header>
-</body>
+
+
+<nav class="navbar fixed-top navbar-expand-lg beta-menu navbar-dropdown align-items-center ">
+	<div class="container">
+		<a class="navbar-brand" style="color:white" href="Welcome"> <!--<img src="assets/img/araucaria-1.png" width="51" height="51" class="d-inline-block align-top" alt="">-->Araucaria Music</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="navbar-toggler-icon"></span>
+			<span class="navbar-toggler-icon"></span>
+			<span class="navbar-toggler-icon"></span>
+			<span class="navbar-toggler-icon"></span>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+	<!--MENU PARA ADMINISTRADOR-->
+	<div *ngIf="userLogin == 1">
+		<ul class="navbar-nav" style="color:white">
+			<li class="nav-item">
+				<a class="nav-link active" href="">Quienes Somos</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="">
+						Catálogo
+					</a>
+					<a class="dropdown-item" href="">
+						Mini Álbumes
+					</a>
+					<a class="dropdown-item" href="">
+						Álbumes Completos
+					</a>
+					<a class="dropdown-item" href="">
+						Info. Comercialización
+					</a>
+				</div>
+			</li>
+			<li  class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="">Ventas</a>
+					<a class="dropdown-item" href="">Consultas</a>
+					<a class="dropdown-item" href="">Usuarios</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrador <?= $nombre ?></a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="">SALIR</a>
+				</div>
+			</li>
+		</ul>
+	</div>            
+	<!--MENU PARA CLIENTES-->
+	<div *ngIf="userLogin == 2"> 
+		<ul class="navbar-nav" style="color:white">
+			<li class="nav-item">
+				<a class="nav-link active" href="">Quienes Somos</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="">Productos</a>
+			</li>	
+			<li class="nav-item">
+				<a class="nav-link" href="">
+					Contacto
+				</a>
+			</li>
+			<li  class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Mi Cuenta</b></a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="">
+						Mis Compras
+					</a>
+					<a class="dropdown-item" href="">
+						Mis Datos
+					</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Bienvenido NOMBRE
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="">SALIR</a>
+				</div>
+			</li>
+		</ul>
+		<a class="navbar-brand ml-auto" href="carrito_mini_album"><img src="assets/img/outline_shopping_cart_white_18dp.png" width="24" height="24" class="d-inline-block align-top" alt=""> Carrito</a>
+	</div>
+	<div *ngIf="userLogin == 0">
+		<!--            MENU PARA PUBLICO EN GENERAL-->
+			<ul class="navbar-nav" style="color:white">
+			  <li class="nav-item">
+				<a class="nav-link active" href="">Quienes Somos</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="">Productos</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="">Informacion de contacto</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="">Terminos y usos</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="">Login</a>
+			  </li>
+			</ul>
+		</div>
+	</div>

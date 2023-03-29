@@ -8,6 +8,7 @@ header {
     align-items: center;
 }
 nav {
+    background-color: #FFE4B5; /* Color naranja pastel */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

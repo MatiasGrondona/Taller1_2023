@@ -10,6 +10,7 @@ import { CardProductoComponent } from './componentes/card-producto/card-producto
 import { BodyProductoComponent } from './componentes/body-producto/body-producto.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { AddProductoComponent } from './componentes/add-producto/add-producto.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AddProductoComponent } from './componentes/add-producto/add-producto.co
     CardProductoComponent,
     BodyProductoComponent,
     ContactoComponent,
-    AddProductoComponent
+    AddProductoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
